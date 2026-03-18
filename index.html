@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css" id="wp-custom-css">
+        .form-container {
+            width: 100%;
+            max-width: 600px;
+            /* max-w-2xl */
+            background-color: #ffffff;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            /* shadow-xl */
+            border-radius: 8px;
+            /* rounded-lg */
+            padding: 32px;
+            /* p-8 */
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1f2937;
+            /* text-gray-800 */
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        /* Form Layout */
+        .form-group {
+            margin-bottom: 24px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+
+            /* md:grid-cols-2 */
+            .form-group.two-cols {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Label and Input Styling */
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #374151;
+            /* text-gray-700 */
+            margin-bottom: 4px;
+        }
+
+        .required-star {
+            color: #ef4444;
+            /* text-red-500 */
+        }
+
+        .input-field {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            /* border-gray-300 */
+            border-radius: 6px;
+            /* rounded-md */
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            box-sizing: border-box;
+            /* Important for padding/width calculation */
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #3b82f6;
+            /* blue-600 */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+            /* focus ring */
+        }
+
+        /* Error Messages */
+        .error-message {
+            color: #ef4444;
+            /* text-red-500 */
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .input-field.error {
+            border-color: #ef4444 !important;
+        }
+
+        /* Select Field */
+        select.input-field {
+            appearance: none;
+            /* remove default dropdown arrow */
+
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 1em;
+        }
+
+
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+            background-color: #2563eb;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.15s ease-in-out;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .submit-button:hover {
+            background-color: #1d4ed8;
+        }
+
+
+        #successMessage {
+            text-align: center;
+            padding: 16px;
+            background-color: #d1fae5;
+            color: #065f46;
+            border-radius: 6px;
+            font-weight: 500;
+            display: none;
+            margin-top: 24px;
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div id="logo">
+                    <a href="https://askxquad.com/" class="custom-logo-link" rel="home" aria-current="page"><img
+                            width="213" height="50" src="https://askxquad.com/wp-content/uploads/2022/08/logo.png"
+                            class="custom-logo" alt="askxquad" decoding="async" /></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="menu-important_links" class="navbar-nav navbar mb-2 mb-lg-0 navbar-light">
+                        <li id="menu-item-195"
+                            class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-195">
+                            <a href="https://askxquad.com/" aria-current="page" class="nav-link">Home</a></li>
+                        <li id="menu-item-238"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238"><a
+                                href="https://askxquad.com/services/" class="nav-link">Services</a></li>
+                        <li id="menu-item-253"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-253"><a href="#"
+                                class="nav-link">FAQ</a></li>
+                        <li id="menu-item-263"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a
+                                href="https://askxquad.com/contact/" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-12 search-sec text-center pt-2 pt-lg-5 pb-lg-5">
+                    <h1>How Can We Help?</h1>
+                    <div id="askxquad-search">
+                        <form role="search" method="get" action="https://askxquad.com/">
+                            <div class="input-group">
+                                <input type="text" id="search" required class="form-control"
+                                    placeholder="Enter a keyword..." value="" name="s" title="Search for:" />
+                                <!-- <select  class="custom-select" name="">
+                              <option value="">All</option>
+                              <option value="option1">Option 1</option>
+                              <option value="option2">Option 2</option>
+                              <option value="option3">Option 3</option>
+                              <option value="option4">Option 4</option>
+                              <option value="option4">Option 5</option>
+                           </select> -->
+                                <div class="input-group-append">
+                                    <button type="submit" name="submit" class="btn"><i
+                                            class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28 " preserveAspectRatio="none">
+            <defs>
+                <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+            </defs>
+            <g class="wave1">
+                <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+            </g>
+            <g class="wave2">
+                <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+            </g>
+            <g class="wave3">
+                <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+            </g>
+        </svg>
+    </section>
+    <!-- End Hero Section -->
+    <!-- Start How Do You Want -->
+    <section class="proceed-sec pt60">
+        <div class="container">
+            <div class="heading text-center">
+                <span>How Do You Want To Proceed ?</span>
+            </div>
+            <p class="text-center">We're committed to your complete satisfaction with our service. If you're not 100%
+                happy, we'll do whatever it takes to make it right.</p>
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="blue-box text-center">
+                        <div class="icon-sec mb-3 d-flex justify-content-center align-items-center">
+                            <i class="fa fa-floppy-o" aria-hidden="true"></i><span> Help Desk</span>
+                        </div>
+                        <p class="text-light">Search or browse for help topics next to this page.</p>
+                        <a href="https://askxquad.com/services/" class="btn btn-a"> Browse All Topics</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="green-box text-center">
+                        <div class="icon-sec mb-3 d-flex justify-content-center align-items-center">
+                            <i class="fa fa-floppy-o" aria-hidden="true"></i><span> Live Chat</span>
+                        </div>
+                        <p class="text-light">The best tech solution, ready to help you</p>
+                        <a href="#" class="btn btn-a"> Go To Live Chat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End How Do You Want -->
+    <!-- Start How it works -->
+    <section class="pt80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="heading mb-5">
+                        <span>How it works</span>
+                    </div>
+                    <div class="how-points">
+                        <span>1. Ask your question</span>
+                        <p class="mt-2">Tell us your situation. Ask any question in any category, anytime you want.</p>
+                    </div>
+                    <div class="how-points">
+                        <span>2. Let us match you</span>
+                        <p class="mt-2">We’ll connect you in minutes with the best Expert for your question.</p>
+                    </div>
+                    <div class="how-points">
+                        <span>3. Chat with an Expert</span>
+                        <p class="mt-2">Talk, text, or chat till you have your answer. Members get unlimited
+                            conversations 24/7, so you’ll always have an Expert ready to help.</p>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img src="https://askxquad.com/wp-content/themes/askxquad/assets/img/how-right.png"
+                        class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End How it works -->
+    <!-- Start Popular Services -->
+    <section class="pt80">
+        <div class="container">
+            <div class="heading mb-5 text-center">
+                <span>Popular Services</span>
+            </div>
+            <div id="popular" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#popular" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#popular" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#popular" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/antivirus-setup-and-installation/"><img
+                                            class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Antivirus-Setup.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/antivirus-setup-and-installation/"
+                                            class="web-a"> Antivirus Setup and Installation</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/arlo-camera-installation-and-setup/"><img
+                                            class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Arlo-Camera-Installation.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/arlo-camera-installation-and-setup/"
+                                            class="web-a">Arlo Camera Installation and Setup </a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/book-gas-connection-services/"><img class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Gas-Connection.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/book-gas-connection-services/"
+                                            class="web-a">Book Gas Connection Services</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/call-vegetable-store/"><img class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Vegetable-Store.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/call-vegetable-store/"
+                                            class="web-a">Call Vegetable Store</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/cctv-security-camera-installation/"><img
+                                            class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Camera-Installation.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/cctv-security-camera-installation/"
+                                            class="web-a">CCTV Security Camera Installation
+                                        </a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/data-backup-and-transfer/"><img class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Data-Backup.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/data-backup-and-transfer/"
+                                            class="web-a">Data Backup and Transfer</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/electric-car-charger-installation/"><img
+                                            class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Electric-Car-Charger.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/electric-car-charger-installation/"
+                                            class="web-a">Electric Car Charger Installation</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/gym-and-fitness-center/"><img class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Gym-and-Fitness.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/gym-and-fitness-center/"
+                                            class="web-a">Gym and Fitness Center</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/hair-and-spa-grooming-services/"><img
+                                            class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Hair-and-Spa.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/hair-and-spa-grooming-services/"
+                                            class="web-a">Hair and Spa Grooming Services</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/hard-drive-reset-and-cleaned-up/"><img
+                                            class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Hard-Drive-Reset.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/hard-drive-reset-and-cleaned-up/"
+                                            class="web-a">Hard Drive Reset And Cleaned up</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/hiring-attorney-lawyer-services/"><img
+                                            class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Lawyer-Services.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/hiring-attorney-lawyer-services/"
+                                            class="web-a">Hiring Attorney Lawyer Services</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/hiring-painting-services/"><img class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Painting-Services.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/hiring-painting-services/"
+                                            class="web-a">Hiring Painting Services</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/home-and-office-network-cabling/"><img
+                                            class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Office-Network-Cabling.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/home-and-office-network-cabling/"
+                                            class="web-a">Home and Office Network Cabling</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/my-pet-care-services/"><img class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Pet-Care.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/my-pet-care-services/"
+                                            class="web-a">My Pet Care Services</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="popular-sec text-center">
+                                    <a href="https://askxquad.com/refrigerator-installation/"><img class="img-fluid"
+                                            src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Refrigerator.jpg"
+                                            alt=""></a>
+                                    <p class="mt-3"><a href="https://askxquad.com/refrigerator-installation/"
+                                            class="web-a">Refrigerator Installation</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Popular Services -->
+    <!-- Start Call To Action -->
+    <section class="pt80">
+        <div class="container">
+            <div class="register-bg d-lg-flex align-items-center justify-content-between mt-2">
+                <span>Can't find what you're looking for? Ask us anything </span>
+                <p class="mt-3 mb-0">
+                    <a href="#" class="btn btn-web">Chat With Us!</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- End Call To Action -->
+    <!-- Start Testimonials -->
+    <section class="pt80">
+        <div class="container">
+            <div class="heading mb-5 ">
+                <span>Meet the Experts</span>
+            </div>
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-lg-flex align-items-center justify-content-between">
+                            <div class="testimonial-img">
+                                <img src="https://askxquad.com/wp-content/themes/askxquad/assets/img/testimonials-1.png"
+                                    alt="">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <p>He was Professional, cleaned up after himself, and did a great job with the install.
+                                    Took time to explain details about the install and how to work everything. show less
+                                </p>
+                                <span><b>Alex Smith</b> - Concord, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-lg-flex align-items-center justify-content-between">
+                            <div class="testimonial-img">
+                                <img src="https://askxquad.com/wp-content/themes/askxquad/assets/img/testimonials-1.png"
+                                    alt="">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <p>My experience was great! I showed the tech where the HVAC system was located and gave
+                                    him the thermostat to install. It was all done in an hour and he waited for me to
+                                    use it to ensure it was working properly.</p>
+                                <span><b>Byron C.</b> - Noblesville, IN</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-lg-flex align-items-center justify-content-between">
+                            <div class="testimonial-img">
+                                <img src="https://askxquad.com/wp-content/themes/askxquad/assets/img/testimonials-1.png"
+                                    alt="">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <p>He was great. Super patient. Worked for a couple hours trying to figure out the
+                                    problem and finally did.</p>
+                                <span><b>Clay K.</b> - Anaheim, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Testimonials -->
+
+    <!-- Start Footer -->
+    <section class="pt50 footer-bg pb50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 foot-menu">
+                    <div class="foot-logo w-auto mb-3">
+                        <a href="https://askxquad.com/" class="custom-logo-link" rel="home" aria-current="page"><img
+                                width="213" height="50" src="https://askxquad.com/wp-content/uploads/2022/08/logo.png"
+                                class="custom-logo" alt="askxquad" decoding="async" /></a>
+                    </div>
+                    <li id="nav_menu-3" class="list-unstyled mb-3 widget_nav_menu">
+                        <div class="menu-important_links-container">
+                            <ul id="menu-important_links-1" class="menu">
+                                <li
+                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-195">
+                                    <a href="https://askxquad.com/" aria-current="page" class="nav-link">Home</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238"><a
+                                        href="https://askxquad.com/services/" class="nav-link">Services</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-253"><a
+                                        href="#" class="nav-link">FAQ</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a
+                                        href="https://askxquad.com/contact/" class="nav-link">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- <ul class="p-0">
+                     <li>
+                        <a href="#">Services</a>
+                     </li>
+                     <li><a href="#">Membership</a></li>
+                     <li><a href="#">Sign In</a></li>
+                     <li><a href="#">Locations</a></li>
+                  </ul> -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="newletter">
+                        <p class="mb-2"> <span>Subscribe to our Newsletter</span></p>
+
+                        <p class="mt-2 text-white">Join our newsletter to get the latest news and tips</p>
+                        <form action="#">
+                            <div class="col-lg-12">
+                                <div class="d-flex align-items-center">
+                                    <div class="col-lg-8 col-md-7 p-0">
+                                        <input type="text" class="form-control" required=""
+                                            placeholder="Enter Email Address" name="search-text">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn submit-btn">Submit !</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 foot-menu">
+                    <p class="mb-4">
+                        <span>Support</span>
+                    </p>
+                    <ul>
+                        <li>
+                            <span><i class="fa fa-envelope-open-o"></i></span>
+                            <p class="mb-0"> <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="6c1f191c1c031e182c0d1f07141d190d08420f0301">[email&#160;protected]</a>
+                            </p>
+                        </li>
+                    </ul>
+                    <li id="nav_menu-4" class="list-unstyled mb-3 widget_nav_menu"></li>
+                    <!-- <ul class="p-0 mt-3">
+                     <li>
+                        <a href="#">Track your order</a>
+                     </li>
+                     <li><a href="#">FAQ</a></li>
+                     <li><a href="#">Blog</a></li>
+                     <li><a href="#">Chat With Us</a></li>
+                  </ul> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="copyright-sec">
+        <div class="container">
+            <div class="col-lg-12 py-2 text-center">
+                <p class="text-white mb-0">
+                    Copyright © 2025 Askxquad Developed by <a class="text-light" href="https://www.askxquad.com/"
+                        target="_blank"><strong>AskXquad</strong></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
