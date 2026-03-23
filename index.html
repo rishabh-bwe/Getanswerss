@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <style type="text/css" id="wp-custom-css">
         .form-container {
             width: 100%;
@@ -95,12 +97,10 @@
         select.input-field {
             appearance: none;
             /* remove default dropdown arrow */
-
             background-repeat: no-repeat;
             background-position: right 12px center;
             background-size: 1em;
         }
-
 
         .submit-button {
             width: 100%;
@@ -120,7 +120,6 @@
             background-color: #1d4ed8;
         }
 
-
         #successMessage {
             text-align: center;
             padding: 16px;
@@ -132,9 +131,8 @@
             margin-top: 24px;
         }
     </style>
-        <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
@@ -151,7 +149,10 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i></button>
+                    <svg width="20" height="20" viewBox="0 0 0.4 0.4" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.35 0.125H0.05V0.075h0.3zm0 0.1H0.05V0.175h0.3zM0.05 0.325h0.3v-0.05H0.05z" />
+                    </svg></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul id="menu-important_links" class="navbar-nav navbar mb-2 mb-lg-0 navbar-light">
                         <li id="menu-item-195"
@@ -180,21 +181,27 @@
                 <div class="col-lg-12 search-sec text-center pt-2 pt-lg-5 pb-lg-5">
                     <h1>How Can We Help?</h1>
                     <div id="askxquad-search">
-                        <form role="search" method="get" action="https://askxquad.com/">
+                        <form role="search" method="get" action="https://getanswerss.com/">
                             <div class="input-group">
                                 <input type="text" id="search" required class="form-control"
                                     placeholder="Enter a keyword..." value="" name="s" title="Search for:" />
                                 <!-- <select  class="custom-select" name="">
-                              <option value="">All</option>
-                              <option value="option1">Option 1</option>
-                              <option value="option2">Option 2</option>
-                              <option value="option3">Option 3</option>
-                              <option value="option4">Option 4</option>
-                              <option value="option4">Option 5</option>
-                           </select> -->
+										<option value="">All</option>
+										<option value="option1">Option 1</option>
+										<option value="option2">Option 2</option>
+										<option value="option3">Option 3</option>
+										<option value="option4">Option 4</option>
+										<option value="option4">Option 5</option>
+										</select> -->
                                 <div class="input-group-append">
-                                    <button type="submit" name="submit" class="btn"><i
-                                            class="fa fa-search"></i></button>
+                                    <button type="submit" name="submit" class="btn">
+                                        <svg width="22" height="22" viewBox="0 0 1.563 1.563" version="1.2"
+                                            baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" overflow="inherit"
+                                            fill="#2e5d9f">
+                                            <path
+                                                d="M1.114 0.923a0.564 0.564 0 0 0 0.082 -0.293c0 -0.313 -0.254 -0.567 -0.567 -0.567C0.316 0.063 0.063 0.316 0.063 0.63c0 0.313 0.254 0.567 0.567 0.567 0.107 0 0.208 -0.03 0.293 -0.082L1.309 1.5 1.5 1.309zM0.63 0.981c-0.194 0 -0.35 -0.157 -0.351 -0.35A0.351 0.351 0 0 1 0.63 0.279c0.194 0.001 0.35 0.157 0.351 0.351 0 0.193 -0.157 0.35 -0.351 0.35" />
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -226,22 +233,36 @@
                 <span>Hub for Tech Knowledge and Community Interaction</span>
             </div>
             <p class="text-center">From how-to guides to informative articles and engaging discussions - everything is
-                here.</p>
+                here.
+            </p>
             <div class="row">
                 <div class="col-lg-6 p-0">
                     <div class="blue-box text-center">
                         <div class="icon-sec mb-3 d-flex justify-content-center align-items-center">
-                            <svg height="50" width="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2" xml:space="preserve" fill="#2183c5"><path d="M1.113 1.125H0.938c-0.037 0 -0.063 -0.025 -0.063 -0.063v-0.175c0 -0.019 0.006 -0.031 0.019 -0.044L1.556 0.181c0.013 -0.013 0.025 -0.019 0.044 -0.019s0.031 0.006 0.044 0.019l0.175 0.175c0.025 0.025 0.025 0.063 0 0.087L1.156 1.106c-0.013 0.013 -0.025 0.019 -0.044 0.019"/><path d="M1.244 1.194q-0.056 0.056 -0.131 0.056H0.938c-0.106 0 -0.188 -0.081 -0.188 -0.188v-0.175c0 -0.05 0.019 -0.1 0.056 -0.131l0.375 -0.381H0.563C0.456 0.375 0.375 0.456 0.375 0.563v0.875c0 0.106 0.081 0.188 0.188 0.188h0.875c0.106 0 0.188 -0.081 0.188 -0.188v-0.619z"/></svg><span> Guide to Modern Technology</span>
+                            <svg height="50" width="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"
+                                xml:space="preserve" fill="#fff">
+                                <path
+                                    d="M1.113 1.125H0.938c-0.037 0 -0.063 -0.025 -0.063 -0.063v-0.175c0 -0.019 0.006 -0.031 0.019 -0.044L1.556 0.181c0.013 -0.013 0.025 -0.019 0.044 -0.019s0.031 0.006 0.044 0.019l0.175 0.175c0.025 0.025 0.025 0.063 0 0.087L1.156 1.106c-0.013 0.013 -0.025 0.019 -0.044 0.019" />
+                                <path
+                                    d="M1.244 1.194q-0.056 0.056 -0.131 0.056H0.938c-0.106 0 -0.188 -0.081 -0.188 -0.188v-0.175c0 -0.05 0.019 -0.1 0.056 -0.131l0.375 -0.381H0.563C0.456 0.375 0.375 0.456 0.375 0.563v0.875c0 0.106 0.081 0.188 0.188 0.188h0.875c0.106 0 0.188 -0.081 0.188 -0.188v-0.619z" />
+                            </svg>
+                            <span> Guide to Modern Technology</span>
                         </div>
                         <p class="text-light">Access tutorials, tips, and insightful guides to help you to know about
-                            modern tech trends.</p>
+                            modern tech trends.
+                        </p>
                         <a href="https://getanswerss.com/blogs" class="btn btn-a"> Read Blogs</a>
                     </div>
                 </div>
                 <div class="col-lg-6 p-0">
                     <div class="green-box text-center">
                         <div class="icon-sec mb-3 d-flex justify-content-center align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 75 75" xml:space="preserve" fill="#2183c5"><path d="M37.303 11.78c-6.459 0 -11.695 6.113 -11.695 13.654 0 5.23 2.518 9.772 6.217 12.065l-4.289 1.988 -11.412 5.293c-1.103 0.551 -1.653 1.486 -1.653 2.809v12.569c0.091 1.571 1.034 3.036 2.562 3.061h40.601c1.745 -0.152 2.628 -1.558 2.645 -3.061V47.59c0 -1.323 -0.55 -2.258 -1.653 -2.809l-10.999 -5.293 -4.571 -2.166c3.546 -2.345 5.941 -6.789 5.941 -11.887 0 -7.541 -5.236 -13.654 -11.695 -13.654m-18.864 4.801c-2.78 0.106 -4.982 1.308 -6.656 3.225 -1.851 2.307 -2.754 5.047 -2.771 7.772 0.114 4.03 1.917 7.845 5.127 9.84L1.323 43.375C0.441 43.706 0 44.477 0 45.69v10.087c0.069 1.338 0.763 2.462 2.066 2.481h8.518V47.59c0.141 -2.852 1.48 -5.158 3.887 -6.283l8.515 -4.051c0.661 -0.386 1.296 -0.91 1.902 -1.572 -3.511 -5.417 -3.999 -11.906 -1.736 -17.613 -1.472 -0.901 -3.126 -1.48 -4.714 -1.489m38.037 0c-1.818 0.038 -3.498 0.707 -4.877 1.653 2.201 5.759 1.594 12.251 -1.655 17.282 0.717 0.827 1.463 1.461 2.235 1.902l8.185 3.887c2.494 1.368 3.779 3.694 3.804 6.283v10.669h8.765c1.441 -0.124 2.056 -1.274 2.068 -2.482V45.69c0 -1.103 -0.441 -1.874 -1.323 -2.315l-12.652 -6.039c3.281 -2.419 4.929 -6.045 4.961 -9.757 -0.087 -2.938 -0.985 -5.667 -2.771 -7.772 -1.867 -2.025 -4.182 -3.203 -6.739 -3.225"/></svg><span> GetAnswerss Tech Community</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 75 75"
+                                xml:space="preserve" fill="#fff">
+                                <path
+                                    d="M37.303 11.78c-6.459 0 -11.695 6.113 -11.695 13.654 0 5.23 2.518 9.772 6.217 12.065l-4.289 1.988 -11.412 5.293c-1.103 0.551 -1.653 1.486 -1.653 2.809v12.569c0.091 1.571 1.034 3.036 2.562 3.061h40.601c1.745 -0.152 2.628 -1.558 2.645 -3.061V47.59c0 -1.323 -0.55 -2.258 -1.653 -2.809l-10.999 -5.293 -4.571 -2.166c3.546 -2.345 5.941 -6.789 5.941 -11.887 0 -7.541 -5.236 -13.654 -11.695 -13.654m-18.864 4.801c-2.78 0.106 -4.982 1.308 -6.656 3.225 -1.851 2.307 -2.754 5.047 -2.771 7.772 0.114 4.03 1.917 7.845 5.127 9.84L1.323 43.375C0.441 43.706 0 44.477 0 45.69v10.087c0.069 1.338 0.763 2.462 2.066 2.481h8.518V47.59c0.141 -2.852 1.48 -5.158 3.887 -6.283l8.515 -4.051c0.661 -0.386 1.296 -0.91 1.902 -1.572 -3.511 -5.417 -3.999 -11.906 -1.736 -17.613 -1.472 -0.901 -3.126 -1.48 -4.714 -1.489m38.037 0c-1.818 0.038 -3.498 0.707 -4.877 1.653 2.201 5.759 1.594 12.251 -1.655 17.282 0.717 0.827 1.463 1.461 2.235 1.902l8.185 3.887c2.494 1.368 3.779 3.694 3.804 6.283v10.669h8.765c1.441 -0.124 2.056 -1.274 2.068 -2.482V45.69c0 -1.103 -0.441 -1.874 -1.323 -2.315l-12.652 -6.039c3.281 -2.419 4.929 -6.045 4.961 -9.757 -0.087 -2.938 -0.985 -5.667 -2.771 -7.772 -1.867 -2.025 -4.182 -3.203 -6.739 -3.225" />
+                            </svg>
+                            <span> GetAnswerss Tech Community</span>
                         </div>
                         <p class="text-light">Connect, share, and get answers from 10000+ daily active members.</p>
                         <a href="https://community.getanswerss.com/" class="btn btn-a"> Go To Community</a>
@@ -274,8 +295,8 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <img src="https://askxquad.com/wp-content/themes/askxquad/assets/img/how-right.png"
-                        class="img-fluid" alt="">
+                    <img src="https://getanswerss.com/wp-content/uploads/2026/03/how-right.png" class="img-fluid"
+                        alt="how-right">
                 </div>
             </div>
         </div>
@@ -287,161 +308,47 @@
             <div class="heading mb-5 text-center">
                 <span>Community Categories</span>
             </div>
-            <!-- <div id="popular" class="carousel slide" data-bs-ride="carousel">
-               <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#popular" data-bs-slide-to="0" class="active"></button>
-                  <button type="button" data-bs-target="#popular" data-bs-slide-to="1"></button>
-                  <button type="button" data-bs-target="#popular" data-bs-slide-to="2"></button>
-               </div>
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="row">
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/antivirus-setup-and-installation/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Antivirus-Setup.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/antivirus-setup-and-installation/" class="web-a"> Antivirus Setup and Installation</a></p>
-                           </div>
-                        </div>
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/arlo-camera-installation-and-setup/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Arlo-Camera-Installation.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/arlo-camera-installation-and-setup/" class="web-a">Arlo Camera Installation and Setup </a></p>
-                           </div>
-                        </div>
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/book-gas-connection-services/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Gas-Connection.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/book-gas-connection-services/" class="web-a">Book Gas Connection Services</a></p>
-                           </div>
-                        </div>
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/call-vegetable-store/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Vegetable-Store.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/call-vegetable-store/" class="web-a">Call Vegetable Store</a></p>
-                           </div>
-                        </div>
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/cctv-security-camera-installation/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Camera-Installation.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/cctv-security-camera-installation/" class="web-a">CCTV Security Camera Installation
-</a></p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="row">
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/data-backup-and-transfer/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Data-Backup.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/data-backup-and-transfer/" class="web-a">Data Backup and Transfer</a></p>
-                           </div>
-                        </div>
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/electric-car-charger-installation/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Electric-Car-Charger.jpg" alt=""></a>
-                  <p class="mt-3"><a href="https://askxquad.com/electric-car-charger-installation/" class="web-a">Electric Car Charger Installation</a></p>
-                           </div>
-                        </div>
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/gym-and-fitness-center/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Gym-and-Fitness.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/gym-and-fitness-center/" class="web-a">Gym and Fitness Center</a></p>
-                           </div>
-                        </div>
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/hair-and-spa-grooming-services/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Hair-and-Spa.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/hair-and-spa-grooming-services/" class="web-a">Hair and Spa Grooming Services</a></p>
-                           </div>
-                        </div>
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/hard-drive-reset-and-cleaned-up/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Hard-Drive-Reset.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/hard-drive-reset-and-cleaned-up/" class="web-a">Hard Drive Reset And Cleaned up</a></p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="row">
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/hiring-attorney-lawyer-services/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Lawyer-Services.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/hiring-attorney-lawyer-services/" class="web-a">Hiring Attorney Lawyer Services</a></p>
-                           </div>
-                        </div>
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/hiring-painting-services/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Painting-Services.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/hiring-painting-services/" class="web-a">Hiring Painting Services</a></p>
-                           </div>
-                        </div>
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/home-and-office-network-cabling/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Office-Network-Cabling.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/home-and-office-network-cabling/" class="web-a">Home and Office Network Cabling</a></p>
-                           </div>
-                        </div>
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/my-pet-care-services/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Pet-Care.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/my-pet-care-services/" class="web-a">My Pet Care Services</a></p>
-                           </div>
-                        </div>
-                        <div class="col-lg">
-                           <div class="popular-sec text-center">
-                              <a href="https://askxquad.com/refrigerator-installation/"><img class="img-fluid" src="https://askxquad.com/wp-content/themes/askxquad/assets/img/Refrigerator.jpg" alt=""></a>
-                              <p class="mt-3"><a href="https://askxquad.com/refrigerator-installation/" class="web-a">Refrigerator Installation</a></p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
 
-               </div>
-            </div> -->
             <div class="brands">
                 <a href="https://community.getanswerss.com/question-category/internet/" class="icons">
-                    <img decoding="async" src="https://radarro.com/wp-content/uploads/2024/07/whatsapp-m.svg"
+                    <img decoding="async" src="https://getanswerss.com/wp-content/uploads/2026/03/Internet.png"
                         alt="whatsapp" class="img-fluid">
                     <span>Internet</span>
                 </a>
-                <a href="https://community.getanswerss.com/question-category/general/" class="icons">
-                    <img decoding="async" src="https://radarro.com/wp-content/uploads/2024/07/fb-m.svg" alt="facebook"
-                        class="img-fluid">
-                    <span>General</span>
+                <a href="https://community.getanswerss.com/question-category/artificial-intelligence/" class="icons">
+                    <img decoding="async"
+                        src="https://getanswerss.com/wp-content/uploads/2026/03/Artificial-Intelligence.png"
+                        alt="facebook" class="img-fluid">
+                    <span>Artificial intelligence</span>
                 </a>
                 <a href="https://community.getanswerss.com/question-category/software-hardware/" class="icons">
-                    <img decoding="async" src="https://radarro.com/wp-content/uploads/2024/07/instagram-m.svg"
+                    <img decoding="async"
+                        src="https://getanswerss.com/wp-content/uploads/2026/03/Software-and-hardware.png"
                         alt="instagram" class="img-fluid">
                     <span>Software & Hardware</span>
                 </a>
                 <a href="https://community.getanswerss.com/question-category/operating-systems/" class="icons">
-                    <img decoding="async" src="https://radarro.com/wp-content/uploads/2024/07/kik-m.svg" alt="Kik"
-                        class="img-fluid">
+                    <img decoding="async" src="https://getanswerss.com/wp-content/uploads/2026/03/Operating-System.png"
+                        alt="Kik" class="img-fluid">
                     <span>Operating systems</span>
                 </a>
-
-                <a href="https://community.getanswerss.com/question-category/cloud-computing-and-storage/"
-                    class="icons">
-                    <img decoding="async" src="https://radarro.com/wp-content/uploads/2024/07/snapchat-m.svg"
+                <a href="https://community.getanswerss.com/question-category/computers/" class="icons">
+                    <img decoding="async" src="https://getanswerss.com/wp-content/uploads/2026/03/Computer.png"
                         alt="snapchat" class="img-fluid">
-                    <span>Cloud computing and storage</span>
+                    <span>Computers</span>
                 </a>
-
                 <a href="https://community.getanswerss.com/question-category/web-development-tools/" class="icons">
-                    <img decoding="async" src="https://radarro.com/wp-content/uploads/2024/07/Skype-m.svg" alt="skype"
+                    <img decoding="async"
+                        src="https://getanswerss.com/wp-content/uploads/2026/03/Web-Development-Tools.png" alt="skype"
                         class="img-fluid">
                     <span>Web development tools</span>
                 </a>
-
                 <a href="https://community.getanswerss.com/question-category/programming-language/" class="icons">
-                    <img decoding="async" src="https://radarro.com/wp-content/uploads/2024/07/discord-icon.svg"
-                        alt="discord" class="img-fluid">
+                    <img decoding="async"
+                        src="https://getanswerss.com/wp-content/uploads/2026/03/Programming-Language.png" alt="discord"
+                        class="img-fluid">
                     <span>Programming language</span>
                 </a>
-
-
             </div>
         </div>
     </section>
@@ -451,75 +358,321 @@
         <div class="container">
             <div class="register-bg d-lg-flex align-items-center justify-content-between mt-2">
                 <span>Can't find what you're looking for? Ask us anything </span>
-                <p class="mt-3 mb-0">
-                    <a href="#" class="btn btn-web">Chat With Us!</a>
+                <p class="mt-3 mt-lg-0 mb-0">
+                    <a class="btn btn-web open-popup">Chat With Us!</a>
                 </p>
             </div>
         </div>
     </section>
-    <!-- End Call To Action -->
-    <!-- Start Testimonials -->
-    <section class="pt80">
-        <div class="container">
-            <div class="heading mb-5 ">
-                <span>Meet the Experts</span>
-            </div>
-            <div id="demo" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="d-lg-flex align-items-center justify-content-between">
-                            <div class="testimonial-img">
-                                <img src="https://askxquad.com/wp-content/themes/askxquad/assets/img/testimonials-1.png"
-                                    alt="">
-                                <svg width="50" height="50" viewBox="0 0 0.4 0.4" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M0.175 0.175v0.175H0V0.173c0 -0.12 0.113 -0.135 0.113 -0.135l0.015 0.035s-0.05 0.007 -0.06 0.048C0.057 0.15 0.078 0.175 0.078 0.175zm0.225 0v0.175H0.225V0.173c0 -0.12 0.113 -0.135 0.113 -0.135l0.015 0.035s-0.05 0.007 -0.06 0.048c-0.01 0.03 0.01 0.055 0.01 0.055z"/></svg>
-                            </div>
-                            <div class="testimonial-content">
-                                <p>He was Professional, cleaned up after himself, and did a great job with the install.
-                                    Took time to explain details about the install and how to work everything. show less
-                                </p>
-                                <span><b>Alex Smith</b> - Concord, CA</span>
-                            </div>
-                        </div>
+    <!-- popup html -->
+    <div id="contactModal" class="popup-modal" style="display:none;">
+        <div class="form-container">
+            <span class="popup-close">×</span>
+            <h2 align="center">Contact Us</h2>
+            <form id="inquiryForm" action="https://askxquad.com/wp-content/themes/askxquad/submit.php
+					" method="POST" enctype="text/plain" novalidate="">
+                <div class="form-group two-cols">
+                    <div>
+                        <label for="firstName">First Name <span class="required-star">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required="" minlength="2" placeholder="John"
+                            class="input-field">
+                        <p class="error-message" id="firstNameError">This field is required.</p>
                     </div>
-                    <div class="carousel-item">
-                        <div class="d-lg-flex align-items-center justify-content-between">
-                            <div class="testimonial-img">
-                                <img src="https://askxquad.com/wp-content/themes/askxquad/assets/img/testimonials-1.png"
-                                    alt="">
-                                <svg width="50" height="50" viewBox="0 0 0.4 0.4" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M0.175 0.175v0.175H0V0.173c0 -0.12 0.113 -0.135 0.113 -0.135l0.015 0.035s-0.05 0.007 -0.06 0.048C0.057 0.15 0.078 0.175 0.078 0.175zm0.225 0v0.175H0.225V0.173c0 -0.12 0.113 -0.135 0.113 -0.135l0.015 0.035s-0.05 0.007 -0.06 0.048c-0.01 0.03 0.01 0.055 0.01 0.055z"/></svg>
-                            </div>
-                            <div class="testimonial-content">
-                                <p>My experience was great! I showed the tech where the HVAC system was located and gave
-                                    him the thermostat to install. It was all done in an hour and he waited for me to
-                                    use it to ensure it was working properly.</p>
-                                <span><b>Byron C.</b> - Noblesville, IN</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-lg-flex align-items-center justify-content-between">
-                            <div class="testimonial-img">
-                                <img src="https://askxquad.com/wp-content/themes/askxquad/assets/img/testimonials-1.png"
-                                    alt="">
-                               <svg width="50" height="50" viewBox="0 0 0.4 0.4" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M0.175 0.175v0.175H0V0.173c0 -0.12 0.113 -0.135 0.113 -0.135l0.015 0.035s-0.05 0.007 -0.06 0.048C0.057 0.15 0.078 0.175 0.078 0.175zm0.225 0v0.175H0.225V0.173c0 -0.12 0.113 -0.135 0.113 -0.135l0.015 0.035s-0.05 0.007 -0.06 0.048c-0.01 0.03 0.01 0.055 0.01 0.055z"/></svg>
-                            </div>
-                            <div class="testimonial-content">
-                                <p>He was great. Super patient. Worked for a couple hours trying to figure out the
-                                    problem and finally did.</p>
-                                <span><b>Clay K.</b> - Anaheim, CA</span>
-                            </div>
-                        </div>
+                    <div>
+                        <label for="lastName">Last Name <span class="required-star">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required="" minlength="2" placeholder="Doe"
+                            class="input-field">
+                        <p class="error-message" id="lastNameError">This field is required.</p>
                     </div>
                 </div>
+                <div class="form-group two-cols">
+                    <div>
+                        <label for="email">Email <span class="required-star">*</span></label>
+                        <input type="email" id="email" name="email" required="" placeholder="john.doe@example.com"
+                            class="input-field">
+                        <p class="error-message" id="emailError">Please enter a valid email address.</p>
+                    </div>
+                    <div>
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="e.g., 9876543210"
+                            class="input-field">
+                        <p class="error-message" id="phoneError">Please enter a valid phone number (10-15 digits).</p>
+                    </div>
+                </div>
+                <div class="form-group two-cols">
+                    <div>
+                        <label for="services">Service Interest <span class="required-star">*</span></label>
+                        <select id="services" name="services" required="" class="input-field">
+                            <option value="" disabled="" selected="">Select a Service</option>
+                            <option value="arlo_camera_installation_and_setup ">Arlo Camera Installation and Setup
+                            </option>
+                            <option value="book_gas_connection_services">Book Gas Connection Services </option>
+                            <option value="book_hostel_services ">Book Hostel Services </option>
+                            <option value="call_vegetable_store ">Call Vegetable Store </option>
+                            <option value="cctv_security_camera ">CCTV Security Camera Installation </option>
+                            <option value="computer_tuneup_services ">Computer Tuneup Services </option>
+                            <option value="data_backup_and_transfer">Data Backup and Transfer </option>
+                            <option value="dietitian_and_health_care_center ">Dietitian and Health Care Center </option>
+                            <option value="electric_car_charger_installation ">Electric Car Charger Installation
+                            </option>
+                            <option value="gym_and_fitness_center">Gym and Fitness Center </option>
+                            <option value="hair_and_spa_grooming_services  ">Hair and Spa Grooming Services </option>
+                            <option value="hard_drive_reset_and_cleaned_up ">Hard Drive Reset And Cleaned up </option>
+                            <option value="hiring_attorney_lawyer_service ">Hiring Attorney Lawyer Service </option>
+                            <option value="hiring_CPA_and_booking_services ">Hiring CPA and Booking Services </option>
+                            <option value="hiring_painting_services">Hiring Painting Services </option>
+                            <option value="hiring_plumber_services">Hiring Plumber Services </option>
+                            <option value="home_and_office_fire_safety_and _installation">Home and Office Fire Safety
+                                and Installation
+                            </option>
+                            <option value="home_and_office_network_cabling ">Home and Office Network Cabling </option>
+                            <option value="my_pet_care_services">My Pet Care Services </option>
+                            <option value="network_extender-installation ">Network Extender Installation </option>
+                            <option value="new_Wifi_setup_and_installation ">New Wifi Setup and Installation </option>
+                            <option value="operating_system_installation_and _reinstallation ">Operating System
+                                Installation and Reinstallation
+                            </option>
+                            <option value="parlor_and_grooming_services ">Parlor and Grooming Services </option>
+                            <option value="refrigerator_installation ">Refrigerator Installation</option>
+                            <option value="ring-smart-installation ">Ring Smart Installation </option>
+                            <option value="smart_doorbell_installation ">Smart Doorbell Installation </option>
+                            <option value="smart_thermostat_installation ">Smart Thermostat Installation </option>
+                            <option value="software_installation_needed  ">Software Installation Needed </option>
+                            <option value="software_uninstall-and-removal ">Software Uninstall and Removal</option>
+                            <option value="tax_consultant_services">Tax Consultant Services </option>
+                            <option value="tv_mounting_shifting_services ">TV Mounting Shifting Services </option>
+                            <option value="tv_wire_and_cabling_setup ">TV Wire and Cabling Setup </option>
+                            <option value="virus_removal-and_cleanup">Virus Removal and Cleanup</option>
+                        </select>
+                        <p class="error-message" id="servicesError">This field is required.</p>
+                    </div>
+                    <div>
+                        <label for="country">Country <span class="required-star">*</span></label>
+                        <select id="country" name="country" required="" class="input-field">
+                            <option value="" disabled="" selected="">Select a Country</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Albania">Albania</option>
+                            <option value="Algeria">Algeria</option>
+                            <option value="Andorra">Andorra</option>
+                            <option value="Angola">Angola</option>
+                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Austria">Austria</option>
+                            <option value="Azerbaijan">Azerbaijan</option>
+                            <option value="Bahamas">Bahamas</option>
+                            <option value="Bahrain">Bahrain</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Barbados">Barbados</option>
+                            <option value="Belarus">Belarus</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Belize">Belize</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bhutan">Bhutan</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                            <option value="Botswana">Botswana</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Brunei">Brunei</option>
+                            <option value="Bulgaria">Bulgaria</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Burundi">Burundi</option>
+                            <option value="Cabo Verde">Cabo Verde</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Central African Republic">Central African Republic</option>
+                            <option value="Chad">Chad</option>
+                            <option value="Chile">Chile</option>
+                            <option value="China">China</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Comoros">Comoros</option>
+                            <option value="Congo (Brazzaville)">Congo (Brazzaville)</option>
+                            <option value="Congo (Kinshasa)">Congo (Kinshasa)</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Croatia">Croatia</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Cyprus">Cyprus</option>
+                            <option value="Czechia">Czechia</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Djibouti">Djibouti</option>
+                            <option value="Dominica">Dominica</option>
+                            <option value="Dominican Republic">Dominican Republic</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                            <option value="Eritrea">Eritrea</option>
+                            <option value="Estonia">Estonia</option>
+                            <option value="Eswatini">Eswatini</option>
+                            <option value="Ethiopia">Ethiopia</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finland">Finland</option>
+                            <option value="France">France</option>
+                            <option value="Gabon">Gabon</option>
+                            <option value="Gambia">Gambia</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Grenada">Grenada</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Guinea">Guinea</option>
+                            <option value="Guinea-Bissau">Guinea-Bissau</option>
+                            <option value="Guyana">Guyana</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="Iceland">Iceland</option>
+                            <option value="India">India</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Iran">Iran</option>
+                            <option value="Iraq">Iraq</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Jordan">Jordan</option>
+                            <option value="Kazakhstan">Kazakhstan</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Kiribati">Kiribati</option>
+                            <option value="Kuwait">Kuwait</option>
+                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                            <option value="Laos">Laos</option>
+                            <option value="Latvia">Latvia</option>
+                            <option value="Lebanon">Lebanon</option>
+                            <option value="Lesotho">Lesotho</option>
+                            <option value="Liberia">Liberia</option>
+                            <option value="Libya">Libya</option>
+                            <option value="Liechtenstein">Liechtenstein</option>
+                            <option value="Lithuania">Lithuania</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                            <option value="Madagascar">Madagascar</option>
+                            <option value="Malawi">Malawi</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Maldives">Maldives</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Malta">Malta</option>
+                            <option value="Marshall Islands">Marshall Islands</option>
+                            <option value="Mauritania">Mauritania</option>
+                            <option value="Mauritius">Mauritius</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Micronesia">Micronesia</option>
+                            <option value="Moldova">Moldova</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Mongolia">Mongolia</option>
+                            <option value="Montenegro">Montenegro</option>
+                            <option value="Morocco">Morocco</option>
+                            <option value="Mozambique">Mozambique</option>
+                            <option value="Myanmar">Myanmar</option>
+                            <option value="Namibia">Namibia</option>
+                            <option value="Nauru">Nauru</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Netherlands">Netherlands</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="North Korea">North Korea</option>
+                            <option value="North Macedonia">North Macedonia</option>
+                            <option value="Norway">Norway</option>
+                            <option value="Oman">Oman</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Palau">Palau</option>
+                            <option value="Palestine State">Palestine State</option>
+                            <option value="Panama">Panama</option>
+                            <option value="Papua New Guinea">Papua New Guinea</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Philippines">Philippines</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Qatar">Qatar</option>
+                            <option value="Romania">Romania</option>
+                            <option value="Russia">Russia</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                            <option value="Saint Lucia">Saint Lucia</option>
+                            <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                            <option value="Samoa">Samoa</option>
+                            <option value="San Marino">San Marino</option>
+                            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="Senegal">Senegal</option>
+                            <option value="Serbia">Serbia</option>
+                            <option value="Seychelles">Seychelles</option>
+                            <option value="Sierra Leone">Sierra Leone</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Slovakia">Slovakia</option>
+                            <option value="Slovenia">Slovenia</option>
+                            <option value="Solomon Islands">Solomon Islands</option>
+                            <option value="Somalia">Somalia</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="South Korea">South Korea</option>
+                            <option value="South Sudan">South Sudan</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Suriname">Suriname</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Syria">Syria</option>
+                            <option value="Taiwan">Taiwan</option>
+                            <option value="Tajikistan">Tajikistan</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Timor-Leste">Timor-Leste</option>
+                            <option value="Togo">Togo</option>
+                            <option value="Tonga">Tonga</option>
+                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                            <option value="Tunisia">Tunisia</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Turkmenistan">Turkmenistan</option>
+                            <option value="Tuvalu">Tuvalu</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="United Arab Emirates">United Arab Emirates</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Uzbekistan">Uzbekistan</option>
+                            <option value="Vanuatu">Vanuatu</option>
+                            <option value="Vatican City">Vatican City</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Yemen">Yemen</option>
+                            <option value="Zambia">Zambia</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+                        </select>
+                        <p class="error-message" id="countryError">This field is required.</p>
+                    </div>
+                </div>
+                <div class="form-group two-cols">
+                    <div>
+                        <label for="state">State/Province</label>
+                        <input type="text" id="state" name="state" placeholder="California" class="input-field">
+                    </div>
+                    <div>
+                        <label for="pinCode">Pin Code/Zip Code</label>
+                        <input type="text" id="pinCode" name="pinCode" pattern="[0-9]{4,10}" placeholder="90210"
+                            class="input-field">
+                        <p class="error-message" id="pinCodeError">Please enter a valid code (4-10 digits).</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-button" name="submitBtn">
+                        Submit Inquiry
+                    </button>
+                </div>
+            </form>
+            <div id="successMessage">
+                Thank you! Your inquiry has been submitted successfully.
             </div>
         </div>
-    </section>
-    <!-- End Testimonials -->
+    </div>
+    <!-- End Call To Action -->
     <section class="pt80">
         <div class="container">
             <div class="heading mb-5 ">
@@ -537,7 +690,6 @@
                             </a>
                             <a href="https://radarro.com/author/khushboo-kumari/" class="d-block mb-2"> by Khushboo
                                 Kumari </a>
-
                             <div class="d-flex align-items-center justify-content-between">
                                 <span class="d-flex align-items-center">
                                     <svg width="17" height="17" viewBox="0 0 17 17" fill="#595959"
@@ -562,7 +714,6 @@
                             </a>
                             <a href="https://radarro.com/author/khushboo-kumari/" class="d-block mb-2"> by Khushboo
                                 Kumari </a>
-
                             <div class="d-flex align-items-center justify-content-between">
                                 <span class="d-flex align-items-center">
                                     <svg width="17" height="17" viewBox="0 0 17 17" fill="#595959"
@@ -579,7 +730,6 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="rd-card">
-
                         <div class="img-placeholder rounded"><a href="https://radarro.com/fruzo/" aria-label="post-img">
                                 <img width="800" height="450"
                                     src="https://radarro.com/wp-content/uploads/2025/09/Fruzo.webp"
@@ -587,7 +737,8 @@
                                     fetchpriority="high"
                                     srcset="https://radarro.com/wp-content/uploads/2025/09/Fruzo.webp 800w, https://radarro.com/wp-content/uploads/2025/09/Fruzo-300x169.webp 300w, https://radarro.com/wp-content/uploads/2025/09/Fruzo-768x432.webp 768w"
                                     sizes="(max-width: 800px) 100vw, 800px">
-                            </a></div>
+                            </a>
+                        </div>
                         <div class="rd-content">
                             <a href="https://radarro.com/fruzo/" class="d-block web-a title rd-textflow"
                                 aria-label="post-url">
@@ -607,7 +758,6 @@
                                 <a href="https://radarro.com/author/gaurav-rathore/" aria-label="author">
                                     <span class="ps-2 text-muted">Gaurav Rathore</span>
                                 </a>
-
                             </div>
                         </div>
                     </div>
@@ -624,7 +774,6 @@
                             </a>
                             <a href="https://radarro.com/author/gaurav-rathore/" class="d-block mb-2"> by Gaurav Rathore
                             </a>
-
                             <div class="d-flex align-items-center justify-content-between">
                                 <span class="d-flex align-items-center">
                                     <svg width="17" height="17" viewBox="0 0 17 17" fill="#595959"
@@ -648,7 +797,6 @@
                             </a>
                             <a href="https://radarro.com/author/gaurav-rathore/" class="d-block mb-2"> by Gaurav Rathore
                             </a>
-
                             <div class="d-flex align-items-center justify-content-between">
                                 <span class="d-flex align-items-center">
                                     <svg width="17" height="17" viewBox="0 0 17 17" fill="#595959"
@@ -664,75 +812,98 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-
-
     <!-- Start Footer -->
     <footer class="pt50 footer-bg pb50">
         <div class="container">
             <div class="row mb-3">
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <a href="https://getassist.net/" class="site-logo"><img
-                            src="https://getanswerss.com/wp-content/uploads/2024/10/logo-e1729589501348.png" alt="" width="100%"
-                            height="100%" class="img-fluid" aria-label="logo"></a>
-                    <div class="footer-tagline mt-3">Ask. Search. Learn.</div>
+                            src="https://getanswerss.com/wp-content/uploads/2026/03/Foot-logo.png" alt="" width="100%"
+                            height="100%" class="img-fluid mb-3" aria-label="logo"></a>
                     <p class="mb-3">Getanswerss is your smart digital answer engine, delivering fast, clear, and
                         expert-backed
                         solutions to your everyday tech and social media queries. Founded in 2018, we’ve grown into a
                         vibrant knowledge-sharing community where users ask, answer, and learn together.
                     </p>
                     <ul class="list-unstyled top-social-icon">
-                        <li><a href="https://www.facebook.com/GetAssist.net" rel="nofollow" target="_blank"
-                                aria-label="facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="#000">
+                        <li>
+                            <a href="https://www.facebook.com/GetAssist.net" rel="nofollow" target="_blank"
+                                aria-label="facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="#000">
                                     <path
                                         d="M11.7231 9L12.1675 6.10437H9.38908V4.22531C9.38908 3.43313 9.77721 2.66094 11.0216 2.66094H12.2847V0.195625C12.2847 0.195625 11.1385 0 10.0425 0C7.75439 0 6.25877 1.38688 6.25877 3.8975V6.10437H3.71533V9H6.25877V16H9.38908V9H11.7231Z">
                                     </path>
-                                </svg></a></li>
-                        <li><a href="https://twitter.com/GetAssistNet" rel="nofollow" target="_blank"
-                                aria-label="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="#000">
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/GetAssistNet" rel="nofollow" target="_blank"
+                                aria-label="twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="#000">
                                     <path
                                         d="M14.5178 4.74113C14.5279 4.88325 14.5279 5.02541 14.5279 5.16753C14.5279 9.50253 11.2285 14.4975 5.19801 14.4975C3.34013 14.4975 1.61426 13.9594 0.162476 13.0254C0.426444 13.0558 0.680226 13.066 0.954351 13.066C2.48732 13.066 3.89851 12.5483 5.02541 11.665C3.58379 11.6345 2.37566 10.6904 1.95941 9.39088C2.16248 9.42131 2.36551 9.44163 2.57873 9.44163C2.87313 9.44163 3.16757 9.401 3.44166 9.32997C1.93913 9.02538 0.812194 7.70559 0.812194 6.11169V6.07109C1.24873 6.31475 1.75638 6.46703 2.29441 6.48731C1.41116 5.89847 0.832507 4.89341 0.832507 3.75634C0.832507 3.14722 0.994913 2.58884 1.27919 2.10153C2.89341 4.09138 5.31982 5.39084 8.0406 5.533C7.98985 5.28934 7.95938 5.03556 7.95938 4.78175C7.95938 2.97463 9.42132 1.50256 11.2386 1.50256C12.1827 1.50256 13.0355 1.8985 13.6345 2.53809C14.3756 2.39597 15.0863 2.12184 15.7157 1.74622C15.472 2.50766 14.9543 3.14725 14.2741 3.55331C14.934 3.48228 15.5736 3.2995 16.1624 3.04572C15.7158 3.69544 15.1574 4.27409 14.5178 4.74113Z">
                                     </path>
-                                </svg></a></li>
-                        <li><a href="https://www.pinterest.com/getassist_net/" rel="nofollow" target="_blank"
-                                aria-label="pinterest"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="#000">
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.pinterest.com/getassist_net/" rel="nofollow" target="_blank"
+                                aria-label="pinterest">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="#000">
                                     <path
                                         d="M15.75 8C15.75 12.2812 12.2812 15.75 8 15.75C7.2 15.75 6.43125 15.6281 5.70625 15.4031C6.02188 14.8875 6.49375 14.0437 6.66875 13.3719C6.7625 13.0094 7.15 11.5281 7.15 11.5281C7.40313 12.0094 8.14063 12.4187 8.925 12.4187C11.2625 12.4187 12.9469 10.2688 12.9469 7.59688C12.9469 5.0375 10.8562 3.12188 8.16875 3.12188C4.825 3.12188 3.04688 5.36562 3.04688 7.8125C3.04688 8.95 3.65313 10.3656 4.61875 10.8156C4.76563 10.8844 4.84375 10.8531 4.87813 10.7125C4.90313 10.6062 5.03438 10.0781 5.09375 9.83438C5.1125 9.75625 5.10313 9.6875 5.04063 9.6125C4.725 9.22188 4.46875 8.50937 4.46875 7.84375C4.46875 6.13437 5.7625 4.48125 7.96875 4.48125C9.87188 4.48125 11.2063 5.77813 11.2063 7.63438C11.2063 9.73125 10.1469 11.1844 8.76875 11.1844C8.00938 11.1844 7.4375 10.5563 7.62187 9.78438C7.84062 8.8625 8.2625 7.86875 8.2625 7.20312C8.2625 6.60938 7.94375 6.1125 7.28125 6.1125C6.50313 6.1125 5.87813 6.91563 5.87813 7.99375C5.87813 8.68125 6.10938 9.14375 6.10938 9.14375C6.10938 9.14375 5.34375 12.3875 5.20312 12.9937C5.04688 13.6625 5.10938 14.6062 5.175 15.2188C2.29375 14.0906 0.25 11.2844 0.25 8C0.25 3.71875 3.71875 0.25 8 0.25C12.2812 0.25 15.75 3.71875 15.75 8Z">
                                     </path>
-                                </svg></a></li>
-                        <li><a href="https://www.instagram.com/getassistnet/" rel="nofollow" target="_blank"
-                                aria-label="instagram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="#000">
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/getassistnet/" rel="nofollow" target="_blank"
+                                aria-label="instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="#000">
                                     <path
                                         d="M8.16514 4.40626C6.17764 4.40626 4.57451 6.00938 4.57451 7.99688C4.57451 9.98438 6.17764 11.5875 8.16514 11.5875C10.1526 11.5875 11.7558 9.98438 11.7558 7.99688C11.7558 6.00938 10.1526 4.40626 8.16514 4.40626ZM8.16514 10.3313C6.88076 10.3313 5.83076 9.28438 5.83076 7.99688C5.83076 6.70938 6.87764 5.66251 8.16514 5.66251C9.45264 5.66251 10.4995 6.70938 10.4995 7.99688C10.4995 9.28438 9.44951 10.3313 8.16514 10.3313ZM12.7401 4.25938C12.7401 4.72501 12.3651 5.09688 11.9026 5.09688C11.437 5.09688 11.0651 4.72188 11.0651 4.25938C11.0651 3.79688 11.4401 3.42188 11.9026 3.42188C12.3651 3.42188 12.7401 3.79688 12.7401 4.25938ZM15.1183 5.10938C15.0651 3.98751 14.8089 2.99376 13.987 2.17501C13.1683 1.35626 12.1745 1.10001 11.0526 1.04376C9.89639 0.978131 6.43076 0.978131 5.27451 1.04376C4.15576 1.09688 3.16201 1.35313 2.34014 2.17188C1.51826 2.99063 1.26514 3.98438 1.20889 5.10626C1.14326 6.26251 1.14326 9.72813 1.20889 10.8844C1.26201 12.0063 1.51826 13 2.34014 13.8188C3.16201 14.6375 4.15264 14.8938 5.27451 14.95C6.43076 15.0156 9.89639 15.0156 11.0526 14.95C12.1745 14.8969 13.1683 14.6406 13.987 13.8188C14.8058 13 15.062 12.0063 15.1183 10.8844C15.1839 9.72813 15.1839 6.26563 15.1183 5.10938ZM13.6245 12.125C13.3808 12.7375 12.9089 13.2094 12.2933 13.4563C11.3714 13.8219 9.18389 13.7375 8.16514 13.7375C7.14639 13.7375 4.95576 13.8188 4.03701 13.4563C3.42451 13.2125 2.95264 12.7406 2.70576 12.125C2.34014 11.2031 2.42451 9.01563 2.42451 7.99688C2.42451 6.97813 2.34326 4.78751 2.70576 3.86876C2.94951 3.25626 3.42139 2.78438 4.03701 2.53751C4.95889 2.17188 7.14639 2.25626 8.16514 2.25626C9.18389 2.25626 11.3745 2.17501 12.2933 2.53751C12.9058 2.78126 13.3776 3.25313 13.6245 3.86876C13.9901 4.79063 13.9058 6.97813 13.9058 7.99688C13.9058 9.01563 13.9901 11.2063 13.6245 12.125Z">
                                     </path>
-                                </svg></a></li>
-                        <li><a href="https://www.linkedin.com/company/getassistance" rel="nofollow" target="_blank"
-                                aria-label="linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="#000">
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/getassistance" rel="nofollow" target="_blank"
+                                aria-label="linkedin">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="#000">
                                     <path
                                         d="M4.95772 14H2.05522V4.65312H4.95772V14ZM3.50491 3.37812C2.57679 3.37812 1.82397 2.60937 1.82397 1.68124C1.82397 1.23543 2.00107 0.807877 2.31631 0.49264C2.63155 0.177403 3.0591 0.000305176 3.50491 0.000305176C3.95072 0.000305176 4.37828 0.177403 4.69351 0.49264C5.00875 0.807877 5.18585 1.23543 5.18585 1.68124C5.18585 2.60937 4.43272 3.37812 3.50491 3.37812ZM15.8208 14H12.9246V9.44999C12.9246 8.36562 12.9027 6.97499 11.4155 6.97499C9.90647 6.97499 9.67522 8.15312 9.67522 9.37187V14H6.77585V4.65312H9.5596V5.92812H9.60022C9.98772 5.19374 10.9343 4.41874 12.3465 4.41874C15.284 4.41874 15.824 6.35312 15.824 8.86562V14H15.8208Z">
                                     </path>
-                                </svg></a></li>
-                        <li><a href="https://www.youtube.com/c/GetAssistnet" rel="nofollow" target="_blank"
-                                aria-label="youtube"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="#000">
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/c/GetAssistnet" rel="nofollow" target="_blank"
+                                aria-label="youtube">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="#000">
                                     <path
                                         d="M15.2682 4.33563C15.0937 3.67868 14.5797 3.1613 13.927 2.98571C12.7439 2.66666 7.99999 2.66666 7.99999 2.66666C7.99999 2.66666 3.2561 2.66666 2.07302 2.98571C1.42032 3.16132 0.906267 3.67868 0.731795 4.33563C0.414795 5.52638 0.414795 8.01077 0.414795 8.01077C0.414795 8.01077 0.414795 10.4952 0.731795 11.6859C0.906267 12.3429 1.42032 12.8387 2.07302 13.0143C3.2561 13.3333 7.99999 13.3333 7.99999 13.3333C7.99999 13.3333 12.7439 13.3333 13.927 13.0143C14.5797 12.8387 15.0937 12.3429 15.2682 11.6859C15.5852 10.4952 15.5852 8.01077 15.5852 8.01077C15.5852 8.01077 15.5852 5.52638 15.2682 4.33563ZM6.44846 10.2664V5.75513L10.4134 8.01082L6.44846 10.2664Z">
                                     </path>
-                                </svg></a></li>
-                        <li><a href="https://t.me/getassist_net" rel="nofollow" target="_blank"
-                                aria-label="telegram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="#000">
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/getassist_net" rel="nofollow" target="_blank" aria-label="telegram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="#000">
                                     <path
                                         d="M15.1213 3.08125L13.0088 13.0437C12.8495 13.7469 12.4338 13.9219 11.8432 13.5906L8.62447 11.2188L7.07134 12.7125C6.89947 12.8844 6.75572 13.0281 6.42447 13.0281L6.65572 9.75L12.6213 4.35938C12.8807 4.12813 12.5651 4 12.2182 4.23125L4.84322 8.875L1.66822 7.88125C0.97759 7.66563 0.96509 7.19063 1.81197 6.85938L14.2307 2.075C14.8057 1.85938 15.3088 2.20313 15.1213 3.08125Z">
                                     </path>
-                                </svg></a></li>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2 mb-4 mb-lg-0">
@@ -837,23 +1008,19 @@
                         </li>
                     </ul>
                 </div>
-
-            </div>
-            <div class="footer-bottom">
-                <p class="mb-3 mb-md-0">© 2026 GetAssist. All Rights Reserved. Built to Educate, Empower &amp; Deliver Accurate Answers.</p>
-                <a href="https://www.dmca.com/Protection/Status.aspx?ID=08c32b41-37e4-4ff0-a92f-f415bce3ef98&amp;refurl=https://getassist.net/">
-                    <img src="/wp-content/uploads/2026/03/footer-img.png" width="80px" alt="">
-                </a>
             </div>
         </div>
     </footer>
     <!-- End Footer -->
     <a href="#" class="scroll-top d-flex align-items-center justify-content-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" xml:space="preserve" width="18" height="18" fill="#fff"><path d="M17.874 11.153c-2.761 -1.973 -5.194 -4.35 -7.231 -7.065l-1.403 -1.871c-0.113 -0.151 -0.367 -0.151 -0.48 0l-1.403 1.871C5.32 6.803 2.887 9.18 0.126 11.153A0.299 0.299 0 0 0 0 11.397V15.597a0.3 0.3 0 0 0 0.163 0.267 0.3 0.3 0 0 0 0.312 -0.023l0.344 -0.245a33.641 33.641 0 0 0 6.854 -6.532L9 7.381l1.328 1.682A33.634 33.634 0 0 0 17.182 15.595l0.344 0.245a0.296 0.296 0 0 0 0.174 0.056 0.302 0.302 0 0 0 0.137 -0.033A0.3 0.3 0 0 0 18 15.597V11.397a0.299 0.299 0 0 0 -0.126 -0.244"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" xml:space="preserve" width="18" height="18"
+            fill="#fff">
+            <path
+                d="M17.874 11.153c-2.761 -1.973 -5.194 -4.35 -7.231 -7.065l-1.403 -1.871c-0.113 -0.151 -0.367 -0.151 -0.48 0l-1.403 1.871C5.32 6.803 2.887 9.18 0.126 11.153A0.299 0.299 0 0 0 0 11.397V15.597a0.3 0.3 0 0 0 0.163 0.267 0.3 0.3 0 0 0 0.312 -0.023l0.344 -0.245a33.641 33.641 0 0 0 6.854 -6.532L9 7.381l1.328 1.682A33.634 33.634 0 0 0 17.182 15.595l0.344 0.245a0.296 0.296 0 0 0 0.174 0.056 0.302 0.302 0 0 0 0.137 -0.033A0.3 0.3 0 0 0 18 15.597V11.397a0.299 0.299 0 0 0 -0.126 -0.244" />
+        </svg>
     </a>
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

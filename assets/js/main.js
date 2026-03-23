@@ -103,3 +103,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+
+// popup js
+
+// Open popup
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('contactModal');
+  const openBtns = document.querySelectorAll('.open-popup');
+  const closeBtn = document.querySelector('.popup-close');
+
+  // Open popup
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      modal.style.display = 'flex';
+      setTimeout(() => modal.classList.add('show'), 10);
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    });
+  });
+
+  // Close popup
+  function closeModal() {
+    modal.classList.remove('show');
+    setTimeout(() => {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }, 300);
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+});
