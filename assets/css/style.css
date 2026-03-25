@@ -1712,6 +1712,10 @@ footer .list-unstyled li:not(:last-of-type) {
   details[open] summary:after {
     top: 40px;
   }
+
+  .process-points::before{
+    bottom: 75px;
+  }
 }
 
 @media (max-width: 575px) {
