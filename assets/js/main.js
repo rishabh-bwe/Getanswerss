@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
   /**
    * Mobile nav toggle
    */
@@ -147,3 +148,29 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Escape') closeModal();
   });
 });
+
+
+// Tabs
+(function () {
+  const allTabs = document.querySelectorAll(".flex-tabs");
+  if (!allTabs.length) return;
+
+  allTabs.forEach(tabContainer => {
+    const buttons = tabContainer.querySelectorAll(".tablinks");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", e => {
+        e.preventDefault();
+        const wrapper = tabContainer.closest(".tabsCon");
+        wrapper.querySelectorAll(".tabcontent").forEach(c => (c.style.display = "none"));
+        tabContainer.querySelectorAll(".tablinks").forEach(b => b.classList.remove("active"));
+
+        const match = btn.getAttribute("onclick")?.match(/'(.*?)'/);
+        if (!match) return;
+
+        const target = wrapper.querySelector("#" + match[1]);
+        if (target) target.style.display = "block";
+        btn.classList.add("active");
+      });
+    });
+  });
+})();
